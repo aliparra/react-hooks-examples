@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './pages/home/Home';
+import HomePage from './pages/home-page/HomePage';
 import { Navbar } from './components/Navbar';
 import UseEffectPage from './pages/use-effect-page/UseEffectPage';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/', // yes, again
-        element: <Home />,
+        element: <HomePage />,
       },
       {
         path: '/use-effect',
