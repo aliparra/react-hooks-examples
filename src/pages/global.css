@@ -1,4 +1,11 @@
-.home, .use-effect-page {
-  text-align: center;
+.home,
+.use-effect-page {
   padding: 2rem;
 }
+
+.home h1,
+.use-effect-page h1{
+  text-align: center;
+}
+
+
