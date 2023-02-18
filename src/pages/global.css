@@ -1,11 +1,29 @@
 .home,
-.use-effect-page {
+.use-effect-page,
+.use-ref-page {
   padding: 2rem;
 }
 
 .home h1,
-.use-effect-page h1{
+.use-effect-page h1,
+.use-ref-page h1 {
   text-align: center;
 }
 
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem;
+}
 
+@media (min-width: 600px) {
+  .article {
+    flex-direction: row;
+    gap: 3rem;
+    margin: 0rem;
+  }
+}
