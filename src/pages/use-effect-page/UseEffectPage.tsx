@@ -4,14 +4,14 @@ import '../global.css';
 import './use-effect-page.css';
 import { BreakingBadQuotes } from '../../components/molecules/breaking-bad-quotes/BreakingBadQuotes';
 
-function UseEffectPage(): ReactElement {
+const UseEffectPage = (): ReactElement => {
   return (
     <div className="use-effect-page">
-      <h1>UseEffectPage page</h1>
+      <h1>UseEffect page</h1>
       <hr />
       <section>
         <h2>Custom hooks</h2>
-        <article className="use-effect-page__custom-hook-form__article">
+        <article className="article">
           <p>
             Creates a basic form using a reusable custom hook called useForm.
           </p>
@@ -21,7 +21,7 @@ function UseEffectPage(): ReactElement {
           </div>
         </article>
         <hr />
-        <article className="use-effect-page__custom-hook-form__article">
+        <article className="article">
           <p>
             Display a breaking bad quote obtained from a public api using custom
             hook useFetch
@@ -36,6 +36,6 @@ function UseEffectPage(): ReactElement {
       <hr />
     </div>
   );
-}
+};
 
 export default UseEffectPage;

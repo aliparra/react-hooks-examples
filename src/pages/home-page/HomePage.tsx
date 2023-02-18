@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import '../global.css';
 import './home-page.css';
 
-function HomePage(): ReactElement {
+const HomePage = (): ReactElement => {
   return (
     <div className="home">
       <h1>Home page</h1>
@@ -47,6 +47,6 @@ function HomePage(): ReactElement {
       </section>
     </div>
   );
-}
+};
 
 export default HomePage;
