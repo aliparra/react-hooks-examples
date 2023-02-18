@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HomePage from './pages/home-page/HomePage';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/molecules/navbar/Navbar';
 import UseEffectPage from './pages/use-effect-page/UseEffectPage';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
