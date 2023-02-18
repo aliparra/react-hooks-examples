@@ -1,35 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HomePage from './pages/home-page/HomePage';
-import { Navbar } from './components/molecules/navbar/Navbar';
-import UseEffectPage from './pages/use-effect-page/UseEffectPage';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-
-const NavbarWrapper = () => {
-  return (
-    <div>
-      <Navbar />
-      <Outlet />
-    </div>
-  );
-};
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <NavbarWrapper />,
-    children: [
-      {
-        path: '/', // yes, again
-        element: <HomePage />,
-      },
-      {
-        path: '/use-effect',
-        element: <UseEffectPage />,
-      },
-    ],
-  },
-]);
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

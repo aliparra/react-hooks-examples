@@ -6,7 +6,15 @@ import './navbar.css';
  * @returns A navbar with a link to the home page.
  */
 export const Navbar = (): ReactElement => {
-  const navbarElements = [{ url: '/', label: '' }];
+  const navbarElements = [
+    { url: '/use-effect', label: 'useEffect' },
+    { url: '/use-ref', label: 'useRef' },
+    { url: '/use-layout-effect', label: 'useLayoutEffect' },
+    { url: '/use-memo', label: 'useMemo' },
+    { url: '/use-callback', label: 'useCallback' },
+    { url: '/use-reducer', label: 'useReducer' },
+    { url: '/use-context', label: 'useContext' },
+  ];
 
   return (
     <div>
@@ -27,12 +35,18 @@ export const Navbar = (): ReactElement => {
           </div>
         </NavLink>
 
-        <NavLink
-          to="/use-effect"
-          className={({ isActive }) => (isActive ? `--active` : `--regular`)}
-        >
-          useEffect
-        </NavLink>
+        {navbarElements.map((navElement) => {
+          return (
+            <NavLink
+              to={navElement.url}
+              className={({ isActive }) =>
+                isActive ? `--active` : `--regular`
+              }
+            >
+              {navElement.label}
+            </NavLink>
+          );
+        })}
       </nav>
     </div>
   );
